@@ -21,7 +21,7 @@ public class VideoViews   extends AppCompatActivity {
            this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
            VideoView videoview = (VideoView) findViewById(R.id.videoBackground);
-           Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.i1);
+           Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.i);
            videoview.setVideoURI(uri);
            videoview.start();
        }
