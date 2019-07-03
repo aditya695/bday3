@@ -96,7 +96,7 @@ ProgressBar progressBar;
                 public void onClick(View v)
                 {
                     try {
-                        Intent intent = new Intent(v.getContext(), VideoViews.class);
+                        Intent intent = new Intent(v.getContext(), YoutubePreview.class);
                         startActivity(intent);
                        /* ScrollView c = findViewById(R.id.scroll);
                         c.setBackgroundResource(R.drawable.ironman1);*/
