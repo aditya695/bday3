@@ -17,6 +17,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.VideoView;
 
+import com.luolc.emojirain.EmojiRainLayout;
 import com.vstechlab.easyfonts.EasyFonts;
 
 import java.nio.file.Files;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //    TextView module_text7;
     TextView module_text8;
 ProgressBar progressBar;
+     EmojiRainLayout mContainer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -129,6 +131,27 @@ ProgressBar progressBar;
                 }
 
             });
+            mContainer = findViewById(R.id.group_emoji_container);
+
+            // add emoji sources
+            mContainer.addEmoji(R.drawable.emoji_1_3 );
+            mContainer.addEmoji(R.drawable.emoji_2_3);
+            mContainer.addEmoji(R.drawable.emoji_3_3);
+            mContainer.addEmoji(R.drawable.emoji_4_3);
+            mContainer.addEmoji(R.drawable.emoji_5_3);
+
+            // set emojis per flow, default 6
+            mContainer.setPer(10);
+
+            // set total duration in milliseconds, default 8000
+            mContainer.setDuration(7200);
+
+            // set average drop duration in milliseconds, default 2400
+            mContainer.setDropDuration(2400);
+
+            // set drop frequency in milliseconds, default 500
+            mContainer.setDropFrequency(500);
+            mContainer.startDropping();
         }
         catch (Exception e){
             Log.d("adityaw",e.toString());
