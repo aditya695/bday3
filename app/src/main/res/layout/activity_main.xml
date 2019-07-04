@@ -11,7 +11,7 @@
     android:layout_height="match_parent"
     android:id="@+id/scroll"
     android:background="@color/ghost_white"
-    tools:context="com.example.uitest.MainActivity">
+    tools:context="com.example.truptibday.MainActivity">
 
     <com.luolc.emojirain.EmojiRainLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
