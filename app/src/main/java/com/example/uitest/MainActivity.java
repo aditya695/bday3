@@ -49,25 +49,25 @@ ProgressBar progressBar;
             this.getSupportActionBar().hide();
             this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                     WindowManager.LayoutParams.FLAG_FULLSCREEN);
-            welcomeBoard= (TextView) findViewById(R.id.welcomeBoard);
+            welcomeBoard= findViewById(R.id.welcomeBoard);
             welcomeBoard.setTypeface(EasyFonts.captureIt(this));
            // contRead.setTextColor(white);
 
 //            welcomeBoard.setTextSize(25);
-            contRead= (TextView) findViewById(R.id.contRead);
+            contRead= findViewById(R.id.contRead);
             contRead.setTypeface(EasyFonts.caviarDreamsBold(this));
 //            contRead.setTextColor(R.color.white);
             //welcomeBoard.setTextSize(25);
-            module_text1=(TextView) findViewById(R.id.module_text1);
+            module_text1= findViewById(R.id.module_text1);
 
-            module_text2=(TextView) findViewById(R.id.module_text2);
+            module_text2= findViewById(R.id.module_text2);
             module_text2.setTypeface(EasyFonts.funRaiser  (this));
 
-            module_text4=(TextView) findViewById(R.id.module_text4);
+            module_text4= findViewById(R.id.module_text4);
             module_text4.setTypeface(EasyFonts.caviarDreamsBold (this));
-            module_text6=(TextView) findViewById(R.id.module_text6);
+            module_text6= findViewById(R.id.module_text6);
             module_text6.setTypeface(EasyFonts.caviarDreamsBold (this));
-            module_text8=(TextView) findViewById(R.id.module_text8);
+            module_text8= findViewById(R.id.module_text8);
             module_text8.setTypeface(EasyFonts.funRaiser (this));
             progressBar= findViewById(R.id.progressBar);
             progressBar.getProgressDrawable().setColorFilter(
@@ -96,7 +96,7 @@ ProgressBar progressBar;
                 public void onClick(View v)
                 {
                     try {
-                        Intent intent = new Intent(v.getContext(), YoutubePreview.class);
+                        Intent intent = new Intent(v.getContext(), RainEmoji.class);
                         startActivity(intent);
                        /* ScrollView c = findViewById(R.id.scroll);
                         c.setBackgroundResource(R.drawable.ironman1);*/

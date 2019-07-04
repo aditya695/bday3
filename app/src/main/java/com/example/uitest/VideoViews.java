@@ -7,7 +7,7 @@ import android.util.Log;
 import android.view.WindowManager;
 import android.widget.VideoView;
 
-public class VideoViews   extends AppCompatActivity {
+public class VideoViews extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -20,10 +20,11 @@ public class VideoViews   extends AppCompatActivity {
            this.getSupportActionBar().hide();
            this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
-           VideoView videoview = (VideoView) findViewById(R.id.videoBackground);
+           VideoView videoview = findViewById(R.id.videoBackground);
            Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.i);
            videoview.setVideoURI(uri);
            videoview.start();
+
        }
        catch (Exception e)
        {

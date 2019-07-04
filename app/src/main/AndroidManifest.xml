@@ -19,7 +19,8 @@
         </activity>
         <activity android:name=".VideoViews"/>
 
-        <activity android:configChanges="orientation|keyboardHidden" android:name=".YoutubePreview"/>
+        <activity android:label="YoutubePreview" android:configChanges="keyboardHidden|orientation|screenSize" android:name=".YoutubePreview"/>
+        <activity android:label="RainEmoji"  android:name=".RainEmoji"/>
 
     </application>
 

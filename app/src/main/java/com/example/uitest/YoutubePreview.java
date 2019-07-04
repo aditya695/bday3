@@ -3,6 +3,7 @@ package com.example.uitest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
@@ -25,10 +26,11 @@ public class YoutubePreview extends YouTubeBaseActivity implements
 
         setContentView(R.layout.youtube_page);
 
-        youTubeView = (YouTubePlayerView) findViewById(R.id.youtube_view);
+        youTubeView = findViewById(R.id.youtube_view);
 
         // Initializing video player with developer key
         youTubeView.initialize(Config.DEVELOPER_KEY, this);
+
     }
 
     @Override
@@ -50,10 +52,23 @@ public class YoutubePreview extends YouTubeBaseActivity implements
 
             // loadVideo() will auto play video
             // Use cueVideo() method, if you don't want to play it automatically
+            player.setPlayerStyle(YouTubePlayer.PlayerStyle.DEFAULT);
+
             player.loadVideo(Config.YOUTUBE_VIDEO_CODE);
 
+        /*    player.setOnFullscreenListener( new YouTubePlayer.OnFullscreenListener()
+            {
+                @Override
+                public void onFullscreen(boolean b) {
+                    Log.d("sadsadsadsadsadsada",b==true?"true":"false");
+                }
+
+
+            });*/
             // Hiding player controls
             player.setPlayerStyle(YouTubePlayer.PlayerStyle.CHROMELESS);
+
+
         }
     }
 
